@@ -2,4 +2,4 @@
 /Lektionen/1/jdk-13.0.1
 *.docx#
 /openjdk-13.0.1_windows-x64_bin
-/eclipse-java-2019-12-R-win32-x86_64
+*.instance
