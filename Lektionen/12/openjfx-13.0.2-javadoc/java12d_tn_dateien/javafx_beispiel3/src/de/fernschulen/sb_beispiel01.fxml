@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.fernschulen.FXMLController">
+   <children>
+      <Label text="Hallo Welt!" />
+      <Label text="Es grüßt Dich Max Meier" />
+      <Label fx:id="ausgabe" />
+      <Button mnemonicParsing="false" onAction="#schaltflaeche2Klick" text="Text setzen" />
+      <Button mnemonicParsing="false" onAction="#schaltflaecheKlick" text="Schließen" />
+   </children>
+</FlowPane>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<eintraege>
+	<eintrag>
+		<name>Müller</name>
+		<punkte>100</punkte>
+	</eintrag>
+	<eintrag>
+		<name>Meier</name>
+		<punkte>1000</punkte>
+	</eintrag>
+	<eintrag>
+		<name>Schmitz</name>
+		<punkte>10</punkte>
+	</eintrag>
+	<eintrag>
+		<name>Strietzel</name>
+		<punkte>1</punkte>
+	</eintrag>
+</eintraege>

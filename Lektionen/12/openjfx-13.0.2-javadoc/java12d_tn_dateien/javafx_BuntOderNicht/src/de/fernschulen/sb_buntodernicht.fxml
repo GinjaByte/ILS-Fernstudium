@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="222.0" prefWidth="397.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="de.fernschulen.FXMLController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="198.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="199.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="1">
+         <children>
+            <CheckBox fx:id="gross" mnemonicParsing="false" onAction="#grossKlick" text="Größer darstellen" />
+            <ComboBox fx:id="auswahl" disable="true" onAction="#auswahlNeu" prefHeight="25.0" prefWidth="118.0" />
+            <Button mnemonicParsing="false" onAction="#beendenKlick" prefHeight="25.0" prefWidth="118.0" text="Beenden" />
+         </children>
+      </VBox>
+      <VBox layoutX="208.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label fx:id="ausgabe" text="Der Text">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <RadioButton mnemonicParsing="false" onAction="#buntKlick" text="bunt">
+               <toggleGroup>
+                  <ToggleGroup fx:id="meineGruppe" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#einfarbigKlick" selected="true" text="einfarbig" toggleGroup="$meineGruppe" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
