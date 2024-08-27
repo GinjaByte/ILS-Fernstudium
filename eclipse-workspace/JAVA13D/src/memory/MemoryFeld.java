@@ -100,7 +100,7 @@ public class MemoryFeld {
 		
 		// Aufgabe 1: init neues Label für Gewinner
 		gewinnerLabel = new Label();
-		// Aufgabe 3: init und Ändern des neuen Labels für den ziehenden Spieler
+		// Aufgabe 2: init und Ändern des neuen Labels für den ziehenden Spieler
 		spielerLabel = new Label();
 		setzeSpielerLabel();
 		
@@ -170,6 +170,7 @@ public class MemoryFeld {
 		}
 		if (computerPunkte + menschPunkte == 21) {
 			// Aufgabe 1: setze das Spiel auf "zu Ende" und zeige den Gewinner an
+			timer.stop();
 			spielEnde = true;
 			zeigeGewinner(computerPunkte > menschPunkte ? "Computer" : "Mensch");
 			Timeline endTimer = new Timeline(new KeyFrame(Duration.millis(10000), new TimerHandler(() -> Platform.exit())));
