@@ -15,7 +15,7 @@ public class Editor extends Application{
 		
 		Scene meineScene = new Scene(root, 600, 450);
 		
-		meineStage.setTitle("Hangman");
+		meineStage.setTitle("Hangman Editor");
 		meineStage.setScene(meineScene);
 		meineStage.show();
 	}

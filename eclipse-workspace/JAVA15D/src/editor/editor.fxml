@@ -30,6 +30,6 @@
       </VBox>
    </right>
    <center>
-      <TextArea fx:id="wortListe" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="wortListe" editable="false" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

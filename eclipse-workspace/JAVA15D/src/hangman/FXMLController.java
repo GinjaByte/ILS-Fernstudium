@@ -1,5 +1,8 @@
 package hangman;
 
+import java.io.FileReader;
+import java.io.IOException;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,18 +57,51 @@ public class FXMLController {
     
 	private void neuesWort() {
 		int zufall = 0;
-		String[] woerter ={"Test", "Automobil", "Versuch", "Hund", "Katze",
-				"Ziege", "Maus", "Elefant", "Isopropylalkohol", "Schwimmbad"};
+		String[] woerter;
 		
-		zufall = (int)(Math.random() * woerter.length);
-		
-		suchwort = new String(woerter[zufall]);
-		anzeige = new StringBuilder(suchwort);
-		
-		for (int zeichen = 0; zeichen < suchwort.length(); zeichen++)
-			anzeige.setCharAt(zeichen, '*');
+		// Die Wörter-Datei wird als Array eingelesen
+		try (FileReader datei = new FileReader("woerter.txt")) {
+			int zeichen = datei.read();
+			// Für den ersten Schritt: lese die Zahl in der ersten Zeile (=Anzahl der Wörter) ein und initialisiere damit das Array
+			StringBuilder anzahlString = new StringBuilder();
+			while ((char) zeichen != '\n') {
+				anzahlString.append((char) zeichen);
+				zeichen = datei.read();
+			}
+			// Wörter Array wird mit der Anzahl der Wörter initilisiert
+			woerter = new String[Integer.parseInt(anzahlString.toString())];
+			// Index im Array, an welcher Stelle das nächste Wort eingefügt wird
+			int woerterIndex = 0;
+			
+			// lese die restlichen Zeilen (=Wörter) ein und füge diese ins Array ein
+			StringBuilder wort = new StringBuilder();
+			while (zeichen != -1) {
+				if ((char) zeichen == '\n') {
+					// lege das Wort ins Array, resette den StringBuilder und erhöhe den Index fürs nächste Wort
+					woerter[woerterIndex] = wort.toString();
+					wort.setLength(0);
+					woerterIndex++;
+				} else {
+					// lese das Wort weiter ein
+					wort.append((char) zeichen);
+				}
+				zeichen = datei.read();
+			}
 
-		ausgabeText.setText(anzeige.toString());
+			// der Rest bleibt gleich
+			zufall = (int)(Math.random() * woerter.length);
+			
+			suchwort = new String(woerter[zufall]);
+			anzeige = new StringBuilder(suchwort);
+			
+			for (int i = 0; i < suchwort.length(); i++)
+				anzeige.setCharAt(i, '*');
+
+			ausgabeText.setText(anzeige.toString());
+		}
+		catch (IOException e ) {
+			System.out.println("Beim Laden ist ein Problem aufgetreten");
+	    }
 	}
     
 	private void pruefen(Object auswahlZeichen) {
