@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class Aufgabe1 {
 	/**
-	 * Ermittelt und gibt als Konsolenausgabe an, ob ein Jahr ein Schaltjahr ist indem der Wert isLeapYear zunächst als falsch initiiert wird.
+	 * Ermittelt und gibt als Konsolenausgabe an, ob ein Jahr ein Schaltjahr ist indem der Wert isLeapYear zunï¿½chst als falsch initiiert wird.
 	 * Der Wert wird nur auf wahr gesetzt, sollte eine der beiden Bedingungen wahr sein:
 	 *     - das Jahr ist durch 4 und nicht durch 100 teilbar.
 	 *     - das Jahr ist durch 4, 100, und 400 teilbar.
@@ -13,7 +13,7 @@ public class Aufgabe1 {
 	 */
 	public static void main(String[] args) {
 		int year; // Wert des eingegebenen Jahres als Integer
-		boolean isLeapYear = false; // später berechneter Wert
+		boolean isLeapYear = false; // spï¿½ter berechneter Wert
 		year = Integer.parseInt(JOptionPane.showInputDialog("Bitte geben Sie eine Jahreszahl ein."));
 		
 		if (year % 4 == 0) {
@@ -36,11 +36,11 @@ Einsendeaufgabe 3.2
 #################################################### */
 public class Aufgabe2 {
 	/**
-	 * Gibt alle Zahlen von 1 bis 50 durch Komma getrennt als Konsolenausgabe aus und nutzt dafür eine for-Schleife.
+	 * Gibt alle Zahlen von 1 bis 50 durch Komma getrennt als Konsolenausgabe aus und nutzt dafï¿½r eine for-Schleife.
 	 */
 	public static void main(String[] args) {
-		final int MAXNUM = 50; // der Wert zu dem gezählt wird (inklusive)
-		int i; // die Schleifenvariable. Außerhalb der Schleife, damit auf sie danach noch zugegriffen werden kann.
+		final int MAXNUM = 50; // der Wert zu dem gezï¿½hlt wird (inklusive)
+		int i; // die Schleifenvariable. Auï¿½erhalb der Schleife, damit auf sie danach noch zugegriffen werden kann.
 		
 		for (i = 1; i < MAXNUM; i++) {
 			System.out.printf("%d,", i);
@@ -55,10 +55,10 @@ Einsendeaufgabe 3.3
 #################################################### */
 public class Aufgabe3 {
 	/**
-	 * Gibt das Doppelte aller Zahlen von 1 bis 100 durch Komma getrennt als Konsolenausgabe aus und nutzt dafür eine while-Schleife.
+	 * Gibt das Doppelte aller Zahlen von 1 bis 100 durch Komma getrennt als Konsolenausgabe aus und nutzt dafï¿½r eine while-Schleife.
 	 */
 	public static void main(String[] args) {
-		final int MAXNUM = 100; // der Wert zu dem gezählt wird (inklusive)
+		final int MAXNUM = 100; // der Wert zu dem gezï¿½hlt wird (inklusive)
 		int i = 1; // die Schleifenvariable 
 		
 		while (i <= MAXNUM) {
@@ -80,7 +80,7 @@ import javax.swing.*;
 public class Aufgabe4 {
 	
 	/**
-	 * Addiert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Addiert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Addition als Integer
@@ -90,7 +90,7 @@ public class Aufgabe4 {
 	}
 
 	/**
-	 * Subtrahiert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Subtrahiert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Subtraktion als Integer
@@ -100,7 +100,7 @@ public class Aufgabe4 {
 	}
 
 	/**
-	 * Multipliziert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Multipliziert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Multiplikation als Integer
@@ -110,7 +110,7 @@ public class Aufgabe4 {
 	}
 
 	/**
-	 * Dividiert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurück
+	 * Dividiert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Division als Float
@@ -125,11 +125,11 @@ public class Aufgabe4 {
 	public static void main(String[] args) {
 		int num1, num2; // erste und zweite zahl der Operation
 		float res = 0; // Zwischenspeicher des Ergebnisses
-		String operation; // Die gewünschte Operation als String (kann "+", "-", "*", oder "/" sein)
+		String operation; // Die gewï¿½nschte Operation als String (kann "+", "-", "*", oder "/" sein)
 
 		num1 = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie die erste Zahl ein."));
 		num2 = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie die zweite Zahl ein."));
-		operation = JOptionPane.showInputDialog("Welche Operation soll ausgeführt werden?\n+ , - , * , /").replaceAll("\\s","");
+		operation = JOptionPane.showInputDialog("Welche Operation soll ausgefï¿½hrt werden?\n+ , - , * , /").replaceAll("\\s","");
 
 		switch (operation) {
 			case "+":
@@ -158,7 +158,7 @@ import javax.swing.*;
 public class Aufgabe5 {
 	
 	/**
-	 * Addiert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Addiert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Addition als Integer
@@ -168,7 +168,7 @@ public class Aufgabe5 {
 	}
 
 	/**
-	 * Subtrahiert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Subtrahiert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Subtraktion als Integer
@@ -178,7 +178,7 @@ public class Aufgabe5 {
 	}
 
 	/**
-	 * Multipliziert zwei ganze Zahlen und gibt das Ergebnis zurück
+	 * Multipliziert zwei ganze Zahlen und gibt das Ergebnis zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Multiplikation als Integer
@@ -188,7 +188,7 @@ public class Aufgabe5 {
 	}
 
 	/**
-	 * Dividiert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurück
+	 * Dividiert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurï¿½ck
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Division als Float
@@ -198,13 +198,13 @@ public class Aufgabe5 {
 	}
 
 	/**
-	 * Potenziert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurück für den Fall, dass die zweite ganze Zahl negativ ist.
+	 * Potenziert zwei ganze Zahlen und gibt das Ergebnis als Dezimalzahl (Float) zurï¿½ck fï¿½r den Fall, dass die zweite ganze Zahl negativ ist.
 	 * @param a die erste Zahl als Integer
 	 * @param b die zweite Zahl als Integer
 	 * @return Ergebnis der Division als Float
 	 */
 	static float potentiate(int a, int b) {
-		float res = a; // Das Ergebnis als Zwischenspeicher, das später mit jedem Schleifendurchgang veränert wird
+		float res = a; // Das Ergebnis als Zwischenspeicher, das spï¿½ter mit jedem Schleifendurchgang verï¿½nert wird
 		if (b == 0) {
 			res = 1;
 		}
@@ -226,11 +226,11 @@ public class Aufgabe5 {
 	public static void main(String[] args) {
 		int num1, num2; // erste und zweite zahl der Operation
 		float res = 0; // Zwischenspeicher des Ergebnisses
-		String operation; // Die gewünschte Operation als String (kann "+", "-", "*", "/", oder "**" (für Potenzen) sein)
+		String operation; // Die gewï¿½nschte Operation als String (kann "+", "-", "*", "/", oder "**" (fï¿½r Potenzen) sein)
 
 		num1 = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie die erste Zahl ein."));
 		num2 = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie die zweite Zahl ein."));
-		operation = JOptionPane.showInputDialog("Welche Operation soll ausgeführt werden?\n+ , - , * , / , **").replaceAll("\\s","");
+		operation = JOptionPane.showInputDialog("Welche Operation soll ausgefï¿½hrt werden?\n+ , - , * , / , **").replaceAll("\\s","");
 
 		switch (operation) {
 			case "+":
