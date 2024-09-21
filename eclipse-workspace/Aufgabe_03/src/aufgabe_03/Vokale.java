@@ -2,7 +2,7 @@ package aufgabe_03;
 
 import javax.swing.JOptionPane;
 
-public class vokale {
+public class Vokale {
 	public static void main(String[] agrs) {
 		// Zeichenkette einlesen
 		String zeichenkette = JOptionPane.showInputDialog("Zeichenkette eingeben.");

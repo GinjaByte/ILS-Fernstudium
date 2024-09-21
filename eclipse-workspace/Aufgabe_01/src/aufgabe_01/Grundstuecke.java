@@ -2,7 +2,7 @@ package aufgabe_01;
 
 import javax.swing.JOptionPane;
 
-public class grundstuecke {
+public class Grundstuecke {
 	// berechnet den Preis eines Grundstücks nach Eingaben und gibt ihn aus.
 	public static void main(String args[]) {
 		// symbolische Konstanten für Aufschläge

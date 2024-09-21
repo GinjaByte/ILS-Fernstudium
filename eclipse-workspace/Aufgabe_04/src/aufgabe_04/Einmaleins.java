@@ -1,6 +1,6 @@
 package aufgabe_04;
 
-public class einmaleins {
+public class Einmaleins {
 	public static void main(String[] args) {
 		// Array mit den Ergebnissen
 		int[][] ergebnisse = new int[10][10];

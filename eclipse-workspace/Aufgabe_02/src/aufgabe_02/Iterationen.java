@@ -2,7 +2,7 @@ package aufgabe_02;
 
 import javax.swing.JOptionPane;
 
-public class iterationen {
+public class Iterationen {
 	public static void main(String args[]) {
 		// lese beide Zahlen ein
 		int zahl1 = Integer.parseInt(JOptionPane.showInputDialog("Geben Sie die erste Zahl ein."));

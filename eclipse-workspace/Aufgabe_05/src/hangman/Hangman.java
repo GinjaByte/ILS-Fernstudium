@@ -2,7 +2,7 @@ package hangman;
 
 import javax.swing.JOptionPane;
 
-public class hangman {
+public class Hangman {
 	
 	public static void main(String[] args) {
 		int versuche = 10;
