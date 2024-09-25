@@ -16,7 +16,7 @@ public class Hangman {
 		while (versuche > 0) {
 			// Gebe den aktuellen Spiel Status aus
 			System.out.printf("Hier ist das aktuelle Wort: %s\n", anzeige.toString());
-			System.out.printf("verbleibende Versuche: %d\n", versuche);
+			System.out.printf("Verbleibende Versuche: %d\n", versuche);
 			
 			// lese das erste Zeichen der Eingabe-Zeichenkette und transformiere es in lowercse
 			char zeichen = JOptionPane.showInputDialog("Geben Sie ein Zeichen ein.").charAt(0);
