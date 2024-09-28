@@ -18,12 +18,12 @@ import javafx.util.Duration;
 public class MemoryFeld {
 	//eine innere Klasse für den Eventhandler des Timer
 	class TimerHandler implements EventHandler<ActionEvent> {
-			@Override
-			//die Methode ruft die Methode karteSchliessen() auf
-			public void handle(ActionEvent arg0) {
-				karteSchliessen();
-			}
+		@Override
+		//die Methode ruft die Methode karteSchliessen() auf
+		public void handle(ActionEvent arg0) {
+			karteSchliessen();
 		}
+	}
 
 	//das Array für die Karten
 	private MemoryKarte[] karten;
