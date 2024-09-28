@@ -10,9 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
@@ -23,6 +21,8 @@ public class TaschenrechnerStart extends JFrame{
 	
 	// bestimmt, ob bei Klick auf eine zahl angehängt oder eine neue Zahl erstellt wird
 	private boolean concatMode;
+	// gewählte operation wird zwischengespeichert
+	String letzteOperation;
 	// die letzte Zahl vor einer Rechenoperation wird hier vermerkt
 	float carryOver;
 	
@@ -74,6 +74,8 @@ public class TaschenrechnerStart extends JFrame{
 		initGUI();
 		setZahl(0);
 		concatMode = false;
+		letzteOperation = "";
+		carryOver = 0;
 	
 		// Größe setzen, Standardverhalten festlegen und anzeigen
 		pack();
@@ -171,35 +173,79 @@ public class TaschenrechnerStart extends JFrame{
 		add(panelLabel, BorderLayout.NORTH);
 		add(panelEingabe, BorderLayout.CENTER);
 	}
-	
-	
-	private void klickOperation(String operation) {
-		
-		concatMode = false;
-	}
+
 	
 	private void klickZahl(int zahl) {
+		if (concatMode)
+			concatString(Integer.toString(zahl).charAt(0));
+		else
+			setString(Integer.toString(zahl));
 		
 		concatMode = true;
 	}
 	
+	private void klickOperation(String operation) {
+		letzteOperation = operation;
+		carryOver = getZahl();
+		setZahl(0);
+		concatMode = false;
+	}
+	
 	private void klickKomma() {
-		
+		if (concatMode) {
+			concatString('.');
+		} else {
+			setString("0.");
+			concatMode = true;
+		}
 	}
 	
+	// berechne das Ergebnis, gebe es aus und setzte den Stand des Taschenrechners zurück (Auswahl der Operation, letzten gemerkten Zahl und sonstige boolean Variablen)
 	private void klickErgebnis() {
-		
+		setZahl(ergebnisBerechnen(carryOver, getZahl(), letzteOperation));
+		concatMode = false;
+		carryOver = 0;
+		letzteOperation = "";
 	}
-	
+
+	// berechnet das Ergebnis der beiden Zahlen je nach operation
+	private float ergebnisBerechnen(float zahl1, float zahl2, String operation) {
+		switch(operation) {
+		case "Addition":
+			return zahl1 + zahl2;
+		case "Subtraktion":
+			return zahl1 - zahl2;
+		case "Multiplikation":
+			return zahl1 * zahl2;
+		case "Division":
+			if (zahl2 == 0)
+				return 0;
+			else
+				return zahl1 / zahl2;
+		default:
+			// ohne ausgewählte Operation wird das Ergebnis gelassen
+			return zahl2;
+		}
+	}
+
 	
 	// Hilfsmethode zum schnellen Holen einer Zahl
 	private float getZahl() {
 		return Float.parseFloat(labelZahl.getText());
 	}
+	
+	// Hilfsmethode zum schnellen Holen einer Zahl
+	private String getString() {
+		return labelZahl.getText();
+	}
 
 	// Hilfsmethode zum schnellen Hinzufügen einer Ziffer
-	private void concatZiffer(int ziffer) {
-		setZahl(Float.parseFloat(Float.toString(getZahl()) + ziffer));
+	private void concatString(char ziffer) {
+		setString(getString() + ziffer);
+		//if (kommaGesetzt)
+		//	setZahl(Float.parseFloat(Float.toString(getZahl()) + ziffer));
+		//else
+		//	setZahl(Float.parseFloat(Integer.toString((int) getZahl()) + ziffer));
 	}
 
 	// Hilfsmethode zum schnellen Setzen einer Zahl
