@@ -40,7 +40,7 @@ public class BanditStart extends JFrame {
 	public BanditStart(String titel) {
 		super(titel);
 
-		// Map für Icons initialisieren
+		// Map für Icons initialisieren - so dass es sowohl in Eclipse, als auch nach einem Export funktioniert
 		iconMap = new HashMap<Integer, ImageIcon>();
 		iconMap.put(1, new ImageIcon(getClass().getResource("/aufgabe_08/icons/eins.png")));
 		iconMap.put(2, new ImageIcon(getClass().getResource("/aufgabe_08/icons/zwei.png")));
