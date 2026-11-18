@@ -1,9 +1,0 @@
-8
-Haus
-Garten
-Zaun
-Elefant
-Hund
-Ziege
-Hangman
-Methode
